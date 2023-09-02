@@ -15,15 +15,17 @@ class LoginPage extends StatelessWidget {
   // method login
   void login(String email, String password) {
     bool success =
-        email == emailController.text && password == passwordController.text;
+        emailController.text == email && passwordController.text == password;
     if (success) {
-      print('berhasil login');
+      Get.to(const HomePage());
     }
-    print('gagal login');
   }
 
   @override
   Widget build(BuildContext context) {
+    const String email = 'test@gmail.com';
+    const String password = '123';
+
     return Scaffold(
       backgroundColor: AppColor.lev1,
       body: LayoutBuilder(
@@ -68,8 +70,7 @@ class LoginPage extends StatelessWidget {
                               ),
                             ),
                             onPressed: () {
-                              login(emailController.text,
-                                  passwordController.text);
+                              login(email, password);
                             },
                             child: const Padding(
                               padding: EdgeInsets.symmetric(
