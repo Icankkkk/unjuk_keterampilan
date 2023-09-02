@@ -48,7 +48,7 @@ class RegisterPage extends StatelessWidget {
                             hintText: 'Email',
                             isObsecure: false,
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           // password
                           MyTextField(
                             textController: passwordController,
