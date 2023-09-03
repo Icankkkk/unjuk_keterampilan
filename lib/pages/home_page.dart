@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unjuk_keterampilan/components/home/drawer/my_drawer.dart';
 import 'package:unjuk_keterampilan/components/home/header.dart';
 import 'package:unjuk_keterampilan/components/home/monthly_chart_pie.dart';
 import 'package:unjuk_keterampilan/components/home/my_buttom_navbar.dart';
@@ -12,6 +13,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: MyDrawer(),
       bottomNavigationBar: const MyBottomNavbar(),
       body: SafeArea(
         child: Padding(
