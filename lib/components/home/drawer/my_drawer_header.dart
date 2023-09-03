@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:unjuk_keterampilan/config/app_asset.dart';
 import 'package:unjuk_keterampilan/controller/c_user.dart';
+import 'package:unjuk_keterampilan/pages/auth/login_page.dart';
 
 class MyDrawerHeader extends StatelessWidget {
   const MyDrawerHeader({
@@ -32,7 +33,7 @@ class MyDrawerHeader extends StatelessWidget {
                   children: [
                     Obx(
                       () => Text(
-                        userController.data.name ?? '',
+                        userController.data.name,
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -42,7 +43,7 @@ class MyDrawerHeader extends StatelessWidget {
                     const SizedBox(height: 4),
                     Obx(
                       () => Text(
-                        userController.data.email ?? '',
+                        userController.data.email,
                         style: const TextStyle(
                           fontWeight: FontWeight.w300,
                           fontSize: 16,
@@ -57,7 +58,9 @@ class MyDrawerHeader extends StatelessWidget {
 
           // Signout button
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(const LoginPage());
+            },
             style: ElevatedButton.styleFrom(
               padding: const EdgeInsets.symmetric(
                 horizontal: 24,

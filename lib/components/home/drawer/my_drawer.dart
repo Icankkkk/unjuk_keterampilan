@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:unjuk_keterampilan/components/home/drawer/my_drawer_header.dart';
 import 'package:unjuk_keterampilan/controller/c_user.dart';
-import 'package:unjuk_keterampilan/data/model/user.dart';
 import 'package:unjuk_keterampilan/pages/history/add_history_page.dart';
 import 'package:unjuk_keterampilan/pages/history/history_page.dart';
 import 'package:unjuk_keterampilan/pages/history/income_outcome_page.dart';
@@ -14,14 +13,8 @@ class MyDrawer extends StatelessWidget {
 
   final userController = Get.put(CUser());
 
-  final String name = 'Faisal';
-  final String email = 'test@gmail.com';
-
   @override
   Widget build(BuildContext context) {
-    var user = User(name: name, email: email);
-    userController.setData(user);
-
     return Drawer(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
