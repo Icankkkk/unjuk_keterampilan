@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:unjuk_keterampilan/config/app_asset.dart';
+import 'package:unjuk_keterampilan/config/app_color.dart';
 
 class MyHeader extends StatelessWidget {
   const MyHeader({
@@ -45,9 +46,16 @@ class MyHeader extends StatelessWidget {
               onTap: () {
                 Scaffold.of(drawer).openEndDrawer();
               },
-              child: const Icon(
-                Icons.menu,
-                size: 40,
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: AppColor.lev3,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Icon(
+                  Icons.menu,
+                  size: 32,
+                ),
               ),
             );
           },
