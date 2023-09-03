@@ -33,7 +33,7 @@ class Today extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.fromLTRB(16, 20, 16, 4),
                 child: Text(
-                  'Rp. 4000.000',
+                  'Rp. 500.000,00',
                   style: TextStyle(
                     color: AppColor.lev4,
                     fontSize: 30,
@@ -44,7 +44,7 @@ class Today extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.fromLTRB(16, 4, 0, 30),
                 child: Text(
-                  '+40% Lebih besar dari hari kemarin',
+                  '+20% dibanding kemarin',
                   style: TextStyle(color: AppColor.lev4),
                 ),
               ),
