@@ -42,7 +42,9 @@ class MyHeader extends StatelessWidget {
         Builder(
           builder: (drawer) {
             return InkWell(
-              onTap: () => Scaffold.of(drawer).openEndDrawer(),
+              onTap: () {
+                Scaffold.of(drawer).openEndDrawer();
+              },
               child: const Icon(
                 Icons.menu,
                 size: 40,

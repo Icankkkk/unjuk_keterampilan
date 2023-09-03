@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:unjuk_keterampilan/components/home/header.dart';
+import 'package:unjuk_keterampilan/components/home/my_buttom_navbar.dart';
+import 'package:unjuk_keterampilan/components/home/my_divider.dart';
 import 'package:unjuk_keterampilan/components/home/today_card.dart';
-import 'package:unjuk_keterampilan/config/app_color.dart';
+import 'package:unjuk_keterampilan/components/home/weekly_chart_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,25 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Favorite',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.money),
-            label: 'Money',
-          ),
-        ],
-        currentIndex: 0,
-        selectedItemColor: AppColor.lev1,
-        onTap: (value) {},
-      ),
+      bottomNavigationBar: const MyBottomNavbar(),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(24, 10, 24, 10),
@@ -41,8 +25,10 @@ class HomePage extends StatelessWidget {
                   children: const [
                     // Pengeluaran hari ini
                     Today(),
+                    // Divider
+                    MyDivider(),
                     // Pengeluaran minggu ini
-
+                    Weekly(),
                     // Perbandingan bulan ini
                   ],
                 ),
