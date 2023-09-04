@@ -44,5 +44,10 @@ class CHistory extends GetxController {
 
   List<History> get list => _list.toList();
 
+  final _loading = false.obs;
+  bool get loading => _loading.value;
+
   setData(dynamic n) => _list.value = n;
+
+  getList(type) async {}
 }

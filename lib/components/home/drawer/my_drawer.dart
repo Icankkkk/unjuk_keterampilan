@@ -38,19 +38,20 @@ class MyDrawer extends StatelessWidget {
                   const Divider(height: 1),
                   ListTile(
                     onTap: () {
-                      Get.to(() => const IncomeOutcomePage());
+                      Get.to(() => const IncomeOutcomePage(
+                            type: 'Pemasukan',
+                          ));
                     },
                     leading: const Icon(Icons.south_west),
                     horizontalTitleGap: 0,
-                    title: const Text(
-                      'Pemasukan',
-                    ),
+                    title: const Text('Pemasukan'),
                     trailing: const Icon(Icons.navigate_next),
                   ),
                   const Divider(height: 0.5),
                   ListTile(
                     onTap: () {
-                      Get.to(() => const IncomeOutcomePage());
+                      Get.to(
+                          () => const IncomeOutcomePage(type: 'Pengeluaran'));
                     },
                     leading: const Icon(Icons.north_east),
                     horizontalTitleGap: 0,
