@@ -62,7 +62,9 @@ class MyDrawer extends StatelessWidget {
                   const Divider(height: 0.5),
                   ListTile(
                     onTap: () {
-                      Get.to(() => const HistoryPage());
+                      Get.to(
+                        const HistoryPage(type: 'Riwayat'),
+                      );
                     },
                     leading: const Icon(Icons.history),
                     horizontalTitleGap: 0,

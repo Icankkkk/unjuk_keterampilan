@@ -130,6 +130,7 @@ class AddHistoryPage extends StatelessWidget {
               );
             }),
           ),
+          // Total
           Row(
             children: [
               const Text('Total: '),
