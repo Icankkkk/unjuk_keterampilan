@@ -26,7 +26,7 @@ class MyDrawer extends StatelessWidget {
                 children: [
                   ListTile(
                     onTap: () {
-                      Get.to(() => const AddHistoryPage());
+                      Get.to(() => AddHistoryPage());
                     },
                     leading: const Icon(Icons.add),
                     horizontalTitleGap: 0,

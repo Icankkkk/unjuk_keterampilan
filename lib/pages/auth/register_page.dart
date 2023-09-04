@@ -93,7 +93,7 @@ class RegisterPage extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Get.to(LoginPage());
+                            Get.to(const LoginPage());
                           },
                           child: const Text(
                             'Masuk',
