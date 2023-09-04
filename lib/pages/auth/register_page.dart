@@ -48,7 +48,7 @@ class RegisterPage extends StatelessWidget {
                             hintText: 'Email',
                             isObsecure: false,
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           // password
                           MyTextField(
                             textController: passwordController,
@@ -93,7 +93,7 @@ class RegisterPage extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Get.to(LoginPage());
+                            Get.to(const LoginPage());
                           },
                           child: const Text(
                             'Masuk',

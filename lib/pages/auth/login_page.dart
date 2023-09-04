@@ -3,23 +3,37 @@ import 'package:get/get.dart';
 import 'package:unjuk_keterampilan/components/my_text_field.dart';
 import 'package:unjuk_keterampilan/config/app_asset.dart';
 import 'package:unjuk_keterampilan/config/app_color.dart';
+import 'package:unjuk_keterampilan/controller/c_user.dart';
 import 'package:unjuk_keterampilan/pages/auth/register_page.dart';
 import 'package:unjuk_keterampilan/pages/home_page.dart';
 
-class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   final emailController = TextEditingController();
+
   final passwordController = TextEditingController();
 
+  final userController = Get.put(CUser());
+
   // method login
-  void login(String email, String password) {
+  login(String email, String password) {
     bool success =
-        email == emailController.text && password == passwordController.text;
+        emailController.text == email && passwordController.text == password;
     if (success) {
-      print('berhasil login');
+      Get.to(const HomePage());
     }
-    print('gagal login');
+  }
+
+  @override
+  void initState() {
+    login(userController.data.email, userController.data.password);
+    super.initState();
   }
 
   @override
@@ -68,8 +82,13 @@ class LoginPage extends StatelessWidget {
                               ),
                             ),
                             onPressed: () {
-                              login(emailController.text,
-                                  passwordController.text);
+                              Future.delayed(
+                                Duration.zero,
+                                () {
+                                  login(userController.data.email,
+                                      userController.data.password);
+                                },
+                              );
                             },
                             child: const Padding(
                               padding: EdgeInsets.symmetric(
