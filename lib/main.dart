@@ -21,7 +21,7 @@ class MainApp extends StatelessWidget {
           secondary: AppColor.lev2,
         ),
       ),
-      home: LoginPage(),
+      home: const LoginPage(),
     );
   }
 }
