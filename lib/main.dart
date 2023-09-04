@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:unjuk_keterampilan/config/app_color.dart';
-import 'package:unjuk_keterampilan/pages/home_page.dart';
+import 'package:unjuk_keterampilan/pages/auth/login_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -21,7 +21,7 @@ class MainApp extends StatelessWidget {
           secondary: AppColor.lev2,
         ),
       ),
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }
